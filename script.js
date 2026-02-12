@@ -5,19 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectsMenu = document.getElementById('projectsMenu');
     const programsMenu = document.getElementById('programsMenu');
 
-    // Ocultar menús al inicio
+    // Inicialmente ocultos
     projectsMenu.style.display = "none";
     programsMenu.style.display = "none";
 
+    // Mostrar/ocultar
     projectsBtn.addEventListener('click', () => {
-        projectsMenu.style.display = "block";
+        projectsMenu.style.display = projectsMenu.style.display === "block" ? "none" : "block";
         programsMenu.style.display = "none";
-        console.log("Proyectos abierto"); // verificación en consola
     });
 
     programsBtn.addEventListener('click', () => {
-        programsMenu.style.display = "block";
+        programsMenu.style.display = programsMenu.style.display === "block" ? "none" : "block";
         projectsMenu.style.display = "none";
-        console.log("Programas abierto"); // verificación en consola
     });
 });
