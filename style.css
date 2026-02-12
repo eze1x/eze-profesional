@@ -1,3 +1,67 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background-color: #111;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* TARJETAS SUPERIORES */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+/* BOTONES */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* MENÚ DESPLEGABLE */
 .menu {
     max-height: 0;
     overflow: hidden;
@@ -6,31 +70,31 @@
     width: 100%;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-
     transition: max-height 0.5s ease;
 
-    display: flex;             /* usar flex para centrar */
-    flex-direction: column;    /* apilar elementos verticalmente */
-    align-items: center;       /* centra horizontalmente todo dentro del menú */
-    padding: 20px;             /* espacio interno para que no quede pegado a los bordes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
+/* CONTENIDO DEL MENÚ */
 .menu h3 {
     margin-bottom: 15px;
-    text-align: center; /* título centrado */
+    text-align: center;
 }
 
 .menu ul {
-    list-style: none;     /* quitamos bullets */
-    padding-left: 0;      /* quitamos padding por defecto */
-    width: 100%;          /* opcional: para que la lista ocupe todo el ancho del menú */
-    display: flex;        /* convertir lista en flexbox */
-    flex-direction: column; /* apilar los elementos verticalmente */
-    align-items: center;  /* centrar los elementos de la lista horizontalmente */
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu ul li {
-    margin-bottom: 10px;  /* espacio entre cada elemento */
+    margin-bottom: 10px;
 }
 
 .menu ul li a {
