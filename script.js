@@ -7,39 +7,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Inicialmente cerrados
     projectsMenu.style.maxHeight = "0";
-    projectsMenu.style.paddingTop = "0";
-    projectsMenu.style.paddingBottom = "0";
     programsMenu.style.maxHeight = "0";
-    programsMenu.style.paddingTop = "0";
-    programsMenu.style.paddingBottom = "0";
 
-    function openMenu(menu) {
-        menu.style.maxHeight = menu.scrollHeight + 40 + "px"; // scrollHeight + padding extra
-        menu.style.paddingTop = "20px";
-        menu.style.paddingBottom = "20px";
-    }
-
-    function closeMenu(menu) {
-        menu.style.maxHeight = "0";
-        menu.style.paddingTop = "0";
-        menu.style.paddingBottom = "0";
+    function toggleMenu(menu) {
+        if (menu.style.maxHeight === "0px" || menu.style.maxHeight === "") {
+            menu.style.maxHeight = menu.scrollHeight + "px"; // toma el tamaño real del contenido
+        } else {
+            menu.style.maxHeight = "0";
+        }
     }
 
     projectsBtn.addEventListener('click', () => {
-        if (projectsMenu.style.maxHeight === "0px") {
-            openMenu(projectsMenu);
-            closeMenu(programsMenu);
-        } else {
-            closeMenu(projectsMenu);
-        }
+        toggleMenu(projectsMenu);
+        programsMenu.style.maxHeight = "0"; // cerrar el otro menú
     });
 
     programsBtn.addEventListener('click', () => {
-        if (programsMenu.style.maxHeight === "0px") {
-            openMenu(programsMenu);
-            closeMenu(projectsMenu);
-        } else {
-            closeMenu(programsMenu);
-        }
+        toggleMenu(programsMenu);
+        projectsMenu.style.maxHeight = "0"; // cerrar el otro menú
     });
 });
