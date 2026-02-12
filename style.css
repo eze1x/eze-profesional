@@ -44,16 +44,15 @@ button:hover {
 
 /* Menús ocultos por defecto */
 .menu {
-    max-height: 0; /* Oculto inicialmente */
-    overflow: hidden; /* Para que no se vea contenido cuando está cerrado */
+    max-height: 0;
+    overflow: hidden;
     background-color: #222;
-    padding: 0 20px; /* Ajustamos padding horizontal */
     border-radius: 10px;
     width: 100%;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 
-    transition: max-height 0.5s ease, padding 0.5s ease; /* animación */
+    transition: max-height 0.5s ease; /* animación suave */
 }
 
 .menu h3 {
