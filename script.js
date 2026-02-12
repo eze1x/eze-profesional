@@ -5,27 +5,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectsMenu = document.getElementById('projectsMenu');
     const programsMenu = document.getElementById('programsMenu');
 
-    // Asegurarnos de que inicien ocultos
+    // Ocultar menús al inicio
     projectsMenu.style.display = "none";
     programsMenu.style.display = "none";
 
-    // Función para alternar visibilidad usando getComputedStyle
-    function toggleMenu(menu) {
-        const currentDisplay = window.getComputedStyle(menu).display;
-        if (currentDisplay === "none") {
-            menu.style.display = "block";
-        } else {
-            menu.style.display = "none";
-        }
-    }
-
     projectsBtn.addEventListener('click', () => {
-        toggleMenu(projectsMenu);
-        programsMenu.style.display = "none"; // oculta el otro menú si estaba abierto
+        projectsMenu.style.display = "block";
+        programsMenu.style.display = "none";
+        console.log("Proyectos abierto"); // verificación en consola
     });
 
     programsBtn.addEventListener('click', () => {
-        toggleMenu(programsMenu);
-        projectsMenu.style.display = "none"; // oculta el otro menú si estaba abierto
+        programsMenu.style.display = "block";
+        projectsMenu.style.display = "none";
+        console.log("Programas abierto"); // verificación en consola
     });
 });
