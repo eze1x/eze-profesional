@@ -1,0 +1,55 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #111; /* negro oscuro */
+    color: #fff; /* texto blanco */
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #222; /* gris oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333; /* gris medio */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
