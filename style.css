@@ -73,6 +73,7 @@ button:hover {
 .menu ul li a {
     color: #fff;
     text-decoration: none;
+    display: inline-block;  /* para que text-align funcione correctamente */
 }
 
 .menu ul li a:hover {
