@@ -4,6 +4,10 @@ const programsBtn = document.getElementById('programsBtn');
 const projectsMenu = document.getElementById('projectsMenu');
 const programsMenu = document.getElementById('programsMenu');
 
+// Asegurarnos de que inicien ocultos
+projectsMenu.style.display = "none";
+programsMenu.style.display = "none";
+
 // Función para alternar visibilidad
 function toggleMenu(menu) {
     if (menu.style.display === "block") {
@@ -22,4 +26,3 @@ programsBtn.addEventListener('click', () => {
     toggleMenu(programsMenu);
     projectsMenu.style.display = "none"; // oculta el otro menú si estaba abierto
 });
-
