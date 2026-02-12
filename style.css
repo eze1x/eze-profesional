@@ -61,12 +61,13 @@ button:hover {
 }
 
 .menu ul {
-    list-style: none;
-    padding-left: 0;
+    list-style: none;     /* quitamos los bullets */
+    padding-left: 0;      /* quitamos padding inicial */
+    text-align: center;   /* centramos los elementos de la lista */
 }
 
 .menu ul li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;  /* un pequeño espacio entre cada elemento */
 }
 
 .menu ul li a {
