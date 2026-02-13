@@ -109,7 +109,7 @@ button:hover {
 
 .menu {
     display: none;
-    margin-top: 20px;
+    margin-top: 10px;
 
     background-color: #1a1a1a;
     border-radius: 14px;
@@ -144,7 +144,7 @@ button:hover {
 .menu ul li {
     display: block;
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     text-align: center;
 }
 
