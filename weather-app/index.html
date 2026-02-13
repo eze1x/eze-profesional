@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Ezequiel Molina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-container">
+        <h1>Weather App</h1>
+        <p>Consulta el clima de cualquier ciudad</p>
+
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Escribe una ciudad...">
+            <button id="searchBtn">Buscar</button>
+        </div>
+
+        <div class="weather-info" id="weatherInfo">
+            <h2 id="cityName"></h2>
+            <img id="weatherIcon" src="" alt="Icono del clima">
+            <p id="description"></p>
+            <p id="temperature"></p>
+        </div>
+
+        <p class="credits">Datos de <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+        <a href="../index.html" class="back-btn">⬅ Volver a la web principal</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
