@@ -7,48 +7,82 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Cuadros de información -->
-        <div class="card">
-            <h2>Sobre mí</h2>
-            <p>Tengo 19 años y soy un apasionado de la computación y la programación. Me interesa todo lo relacionado con el desarrollo de software, diseño web y la creación de aplicaciones, siempre buscando aprender y mejorar mis habilidades. Soy curioso, autodidacta y disfruto explorar nuevas tecnologías para crear proyectos innovadores.</p>
-        </div>
 
-        <div class="card">
-            <h2>Qué estudio</h2>
-            <p>Actualmente voy a comenzar la carrera de Ingeniería en Informática en 2026. Durante mis estudios planeo profundizar en desarrollo web, programación de aplicaciones, bases de datos y todo lo relacionado con software, con el objetivo de combinar la teoría académica con la práctica en proyectos reales.</p>
-        </div>
+<div class="container">
 
-        <div class="card">
-            <h2>Habilidades</h2>
-            <p>Aunque no cuento con experiencia laboral formal, tengo conocimientos prácticos en creación de páginas web, programas .exe y aplicaciones .apk. Manejo HTML, CSS y JavaScript para construir interfaces y funcionalidades interactivas. También tengo experiencia utilizando herramientas como Visual Studio y GitHub, lo que me permite desarrollar y gestionar proyectos de manera organizada y profesional.</p>
-        </div>
-
-        <!-- Botones -->
-        <div class="buttons">
-            <button id="projectsBtn">Mis proyectos</button>
-            <button id="programsBtn">Mis programas</button>
-        </div>
-
-   <div class="menu-wrapper">
-
-    <!-- Menú de proyectos -->
-    <div id="projectsMenu" class="menu">
-        <h3>Mis Proyectos</h3>
-        <ul>
-            <li><a href="#" target="_blank">Juego de clicks (.exe)</a></li>
-            <li><a href="#" target="_blank">Calculadora Web</a></li>
-            <li><a href="#" target="_blank">Álbum Hajime no Ippo</a></li>
-        </ul>
+    <!-- Cuadros de información -->
+    <div class="card">
+        <h2>Sobre mí</h2>
+        <p>
+            Tengo 19 años y soy un apasionado de la computación y la programación.
+            Me interesa el desarrollo de software, diseño web y la creación de aplicaciones.
+        </p>
     </div>
 
-    <!-- Menú de programas -->
-    <div id="programsMenu" class="menu">
-        <h3>Mis Programas</h3>
-        <ul>
-            <li>Contador de clicks (.exe)</li>
-            <li>App para Android (.apk)</li>
-        </ul>
+    <div class="card">
+        <h2>Qué estudio</h2>
+        <p>
+            Voy a comenzar Ingeniería en Informática en 2026,
+            enfocándome en desarrollo web y software.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Habilidades</h2>
+        <p>
+            Tengo conocimientos en HTML, CSS y JavaScript.
+            He creado páginas web, programas .exe y apps .apk.
+        </p>
+    </div>
+
+    <!-- Botones -->
+    <div class="buttons">
+        <button id="projectsBtn">Mis proyectos</button>
+        <button id="programsBtn">Mis programas</button>
+    </div>
+
+    <!-- Menús -->
+    <div class="menu-wrapper">
+
+        <div id="projectsMenu" class="menu">
+            <h3>Mis Proyectos</h3>
+            <ul>
+                <li><a href="#">Juego de clicks (.exe)</a></li>
+                <li><a href="#">Calculadora Web</a></li>
+                <li><a href="#">Álbum Hajime no Ippo</a></li>
+            </ul>
+        </div>
+
+        <div id="programsMenu" class="menu">
+            <h3>Mis Programas</h3>
+            <ul>
+                <li>Contador de clicks (.exe)</li>
+                <li>App para Android (.apk)</li>
+            </ul>
+        </div>
+
     </div>
 
 </div>
+
+<!-- SCRIPT -->
+<script>
+const projectsBtn = document.getElementById("projectsBtn");
+const programsBtn = document.getElementById("programsBtn");
+
+const projectsMenu = document.getElementById("projectsMenu");
+const programsMenu = document.getElementById("programsMenu");
+
+projectsBtn.addEventListener("click", () => {
+    projectsMenu.classList.toggle("active");
+    programsMenu.classList.remove("active");
+});
+
+programsBtn.addEventListener("click", () => {
+    programsMenu.classList.toggle("active");
+    projectsMenu.classList.remove("active");
+});
+</script>
+
+</body>
+</html>
