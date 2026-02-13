@@ -1,6 +1,4 @@
-/* =========================
-   RESET BÁSICO
-========================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -8,18 +6,13 @@
     font-family: Arial, sans-serif;
 }
 
-/* =========================
-   BODY
-========================= */
+/* BODY */
 body {
     background-color: #111;
     color: #fff;
-    min-height: 100vh;
 }
 
-/* =========================
-   CONTENEDOR PRINCIPAL
-========================= */
+/* CONTENEDOR */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -27,20 +20,15 @@ body {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 25px;
 }
 
-/* =========================
-   TARJETAS SUPERIORES
-========================= */
+/* TARJETAS */
 .card {
     background-color: #1e1e1e;
     border-radius: 12px;
     padding: 20px;
-    width: 100%;
     text-align: center;
-
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
@@ -48,13 +36,11 @@ body {
     margin-bottom: 10px;
 }
 
-/* =========================
-   BOTONES
-========================= */
+/* BOTONES */
 .buttons {
     display: flex;
     gap: 15px;
-    margin-top: 10px;
+    justify-content: center;
 }
 
 button {
@@ -62,12 +48,10 @@ button {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-
     background-color: #333;
     color: white;
     font-size: 16px;
-
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -75,48 +59,32 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* =========================
-   CONTENEDOR DE MENÚS
-========================= */
+/* MENÚS */
 .menu-wrapper {
     width: 100%;
 }
 
-/* =========================
-   MENÚ DESPLEGABLE (SOLUCIÓN FINAL)
-========================= */
 .menu {
-    display: none; /* CLAVE: no existe hasta activarse */
-
+    display: none;
     background-color: #222;
     border-radius: 10px;
-    width: 100%;
     margin-top: 20px;
     padding: 20px;
-
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* MENÚ ACTIVO */
 .menu.active {
     display: block;
 }
 
-/* =========================
-   CONTENIDO DEL MENÚ
-========================= */
+/* CONTENIDO */
 .menu h3 {
     margin-bottom: 15px;
 }
 
 .menu ul {
     list-style: none;
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .menu ul li {
@@ -124,7 +92,7 @@ button:hover {
 }
 
 .menu ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
