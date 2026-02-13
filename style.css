@@ -180,7 +180,7 @@ a:active {
 #contact .contact-info {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 #contact .contact-info li {
@@ -190,37 +190,4 @@ a:active {
 #contact .contact-info a {
     color: #fff;
     text-decoration: underline;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-#contact input,
-#contact textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    background-color: #0f0f0f;
-    color: #fff;
-}
-
-#contact button[type="submit"] {
-    padding: 14px;
-    border-radius: 8px;
-    border: none;
-    background-color: #2b2b2b;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-}
-
-#contact button[type="submit"]:hover {
-    background-color: #3a3a3a;
-    transform: translateY(-2px);
 }
