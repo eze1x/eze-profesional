@@ -1,10 +1,7 @@
-const plans = document.querySelector(".plans");
+const btn = document.getElementById("verPlanesBtn");
+const plans = document.getElementById("planes");
 
-window.addEventListener("scroll", () => {
-    const triggerPoint = window.innerHeight * 0.8;
-    const plansTop = plans.getBoundingClientRect().top;
-
-    if (plansTop < triggerPoint) {
-        plans.classList.add("show");
-    }
+btn.addEventListener("click", () => {
+    plans.classList.add("show");
+    plans.scrollIntoView({ behavior: "smooth" });
 });
