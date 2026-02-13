@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App | Ezequiel Molina</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="weather-container">
+    <!-- VOLVER -->
+    <a href="../index.html" class="back-btn">← Volver</a>
+
+    <!-- HERO -->
+    <header class="hero">
         <h1>Weather App</h1>
-        <p>Consulta el clima de cualquier ciudad</p>
+        <p>Consulta el clima de cualquier ciudad en tiempo real</p>
+    </header>
 
-        <div class="search">
-            <input type="text" id="cityInput" placeholder="Escribe una ciudad...">
+    <!-- CONTENEDOR -->
+    <main class="container">
+
+        <!-- BUSCADOR -->
+        <section class="card">
+            <input type="text" id="cityInput" placeholder="Escribí la ciudad">
             <button id="searchBtn">Buscar</button>
-        </div>
+        </section>
 
-        <div class="weather-info" id="weatherInfo">
+        <!-- INFORMACIÓN DEL CLIMA -->
+        <section class="card" id="weatherInfo" style="display: none;">
             <h2 id="cityName"></h2>
-            <img id="weatherIcon" src="" alt="Icono del clima">
+            <img id="weatherIcon" src="" alt="">
             <p id="description"></p>
             <p id="temperature"></p>
-        </div>
+        </section>
 
-        <p class="credits">Datos de <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
-        <a href="../index.html" class="back-btn">⬅ Volver a la web principal</a>
-    </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
