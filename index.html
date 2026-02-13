@@ -3,86 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Web Profesional</title>
+    <title>Mi Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+    <!-- HERO -->
+    <header class="hero">
+        <h1>Eze Moli</h1>
+        <p>Desarrollador Web · Programación · Tecnología</p>
+    </header>
 
-    <!-- Cuadros de información -->
-    <div class="card">
-        <h2>Sobre mí</h2>
-        <p>
-            Tengo 19 años y soy un apasionado de la computación y la programación.
-            Me interesa el desarrollo de software, diseño web y la creación de aplicaciones.
-        </p>
-    </div>
+    <main class="container">
 
-    <div class="card">
-        <h2>Qué estudio</h2>
-        <p>
-            Voy a comenzar Ingeniería en Informática en 2026,
-            enfocándome en desarrollo web y software.
-        </p>
-    </div>
+        <!-- SOBRE MÍ -->
+        <section class="card">
+            <h2>Sobre mí</h2>
+            <p>
+                Tengo 19 años y soy un apasionado de la computación y la programación.
+                Me interesa el desarrollo de software, el diseño web y la creación
+                de aplicaciones. Soy curioso, autodidacta y siempre busco mejorar
+                mis habilidades creando proyectos reales.
+            </p>
+        </section>
 
-    <div class="card">
-        <h2>Habilidades</h2>
-        <p>
-            Tengo conocimientos en HTML, CSS y JavaScript.
-            He creado páginas web, programas .exe y apps .apk.
-        </p>
-    </div>
+        <!-- ESTUDIOS -->
+        <section class="card">
+            <h2>Qué estudio</h2>
+            <p>
+                En 2026 comenzaré la carrera de Ingeniería en Informática.
+                Planeo profundizar en desarrollo web, programación,
+                bases de datos y arquitectura de software, combinando
+                teoría con práctica.
+            </p>
+        </section>
 
-    <!-- Botones -->
-    <div class="buttons">
-        <button id="projectsBtn">Mis proyectos</button>
-        <button id="programsBtn">Mis programas</button>
-    </div>
+        <!-- HABILIDADES -->
+        <section class="card">
+            <h2>Habilidades</h2>
+            <p>
+                Desarrollo de páginas web, programas .exe y apps .apk.
+                Manejo HTML, CSS y JavaScript. Experiencia usando
+                Visual Studio y GitHub para proyectos organizados
+                y escalables.
+            </p>
+        </section>
 
-    <!-- Menús -->
-    <div class="menu-wrapper">
-
-        <div id="projectsMenu" class="menu">
-            <h3>Mis Proyectos</h3>
-            <ul>
-                <li><a href="#">Juego de clicks (.exe)</a></li>
-                <li><a href="#">Calculadora Web</a></li>
-                <li><a href="#">Álbum Hajime no Ippo</a></li>
-            </ul>
+        <!-- BOTONES -->
+        <div class="buttons">
+            <button id="projectsBtn">Mis proyectos</button>
+            <button id="programsBtn">Mis programas</button>
         </div>
 
-        <div id="programsMenu" class="menu">
-            <h3>Mis Programas</h3>
-            <ul>
-                <li>Contador de clicks (.exe)</li>
-                <li>App para Android (.apk)</li>
-            </ul>
+        <!-- MENÚS -->
+        <div class="menu-wrapper">
+
+            <div id="projectsMenu" class="menu">
+                <h3>Mis Proyectos</h3>
+                <ul>
+                    <li><a href="#">Juego de clicks (.exe)</a></li>
+                    <li><a href="#">Calculadora Web</a></li>
+                    <li><a href="#">Álbum Hajime no Ippo</a></li>
+                </ul>
+            </div>
+
+            <div id="programsMenu" class="menu">
+                <h3>Mis Programas</h3>
+                <ul>
+                    <li>Contador de clicks (.exe)</li>
+                    <li>App Android (.apk)</li>
+                </ul>
+            </div>
+
         </div>
 
-    </div>
+    </main>
 
-</div>
-
-<!-- SCRIPT -->
-<script>
-const projectsBtn = document.getElementById("projectsBtn");
-const programsBtn = document.getElementById("programsBtn");
-
-const projectsMenu = document.getElementById("projectsMenu");
-const programsMenu = document.getElementById("programsMenu");
-
-projectsBtn.addEventListener("click", () => {
-    projectsMenu.classList.toggle("active");
-    programsMenu.classList.remove("active");
-});
-
-programsBtn.addEventListener("click", () => {
-    programsMenu.classList.toggle("active");
-    projectsMenu.classList.remove("active");
-});
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
