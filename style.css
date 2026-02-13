@@ -152,4 +152,9 @@ a:active {
     color: #fff;
     text-decoration: none;
 }
+.menu a:focus,
+.menu a:focus-visible {
+    outline: none;
+    text-decoration: none;
+}
 
