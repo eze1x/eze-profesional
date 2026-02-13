@@ -12,60 +12,143 @@ body {
     color: #fff;
 }
 
+/* BOTÓN VOLVER */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #222;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #e10600;
+}
+
 /* HERO */
 .hero {
-    height: 100vh;
-    background: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)
-    ), #111;
-
+    min-height: 90vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 40px 20px;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    letter-spacing: 2px;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #e10600;
 }
 
-.hero-content p {
-    margin: 15px 0 25px;
-    font-size: 1.2rem;
+.hero p {
+    font-size: 18px;
+    max-width: 500px;
+    margin-bottom: 30px;
     color: #ccc;
 }
 
-.btn {
-    padding: 12px 30px;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: transform 0.3s ease, background 0.3s ease;
+.cta-btn {
+    padding: 14px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e10600;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
 }
 
-.btn:hover {
-    background-color: #ddd;
+.cta-btn:hover {
     transform: scale(1.05);
+    background-color: #ff1c14;
 }
 
-/* ABOUT */
-.about {
-    padding: 80px 20px;
-    max-width: 900px;
-    margin: 0 auto;
+/* PLANES */
+.plans {
+    padding: 60px 20px;
+    background-color: #141414;
     text-align: center;
 }
 
-.about h2 {
-    font-size: 2.2rem;
+.plans h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.plans-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* TARJETAS */
+.plan-card {
+    background-color: #1e1e1e;
+    padding: 25px;
+    width: 280px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+}
+
+.plan-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    color: #e10600;
     margin-bottom: 20px;
 }
 
-.about p {
-    color: #bbb;
-    line-height: 1.6;
+.plan-card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.plan-card ul li {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.plan-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.plan-card button:hover {
+    background-color: #e10600;
+}
+
+/* DESTACADO */
+.featured {
+    border: 2px solid #e10600;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #0f0f0f;
+    color: #777;
+    font-size: 14px;
 }
