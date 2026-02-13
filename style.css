@@ -157,6 +157,12 @@ button:hover {
     text-decoration: underline;
 }
 
+/* Icono de descarga para links con download */
+.menu ul li a[download]::after {
+    content: " ⬇";
+    font-size: 14px;
+}
+
 /* =========================
    RESET TOTAL DE LINKS
 ========================= */
