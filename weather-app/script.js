@@ -1,10 +1,5 @@
-// API key de OpenWeatherMap
 const apiKey = "34bb70e90f2b44d8ae4c0b5a3d6aab29";
 
-// Proxy para evitar problemas de CORS en GitHub Pages
-const proxy = "https://cors-anywhere.herokuapp.com/";
-
-// Elementos del DOM
 const searchBtn = document.getElementById("searchBtn");
 const cityInput = document.getElementById("cityInput");
 
@@ -14,22 +9,20 @@ const weatherIcon = document.getElementById("weatherIcon");
 const description = document.getElementById("description");
 const temperature = document.getElementById("temperature");
 
-// Buscar al hacer click
 searchBtn.addEventListener("click", () => {
     const city = cityInput.value.trim();
     if(city) fetchWeather(city);
 });
 
-// Buscar al presionar Enter
 cityInput.addEventListener("keypress", (e) => {
     if(e.key === "Enter") searchBtn.click();
 });
 
-// Función principal
 async function fetchWeather(city) {
     try {
         const encodedCity = encodeURIComponent(city);
-        const res = await fetch(`${proxy}https://api.openweathermap.org/data/2.5/weather?q=${encodedCity}&appid=${apiKey}&units=metric&lang=es`);
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodedCity}&appid=${apiKey}&units=metric&lang=es`;
+        const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`);
         
         if(!res.ok) throw new Error("Ciudad no encontrada");
         
