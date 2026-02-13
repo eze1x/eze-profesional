@@ -1,104 +1,103 @@
+/* RESET */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
+/* BODY */
 body {
-    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    background-color: #0f0f0f;
     color: #fff;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.weather-container {
-    background-color: #1c1c1c;
-    padding: 30px;
-    border-radius: 14px;
+/* VOLVER */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #222;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 100;
+}
+.back-btn:hover {
+    background-color: #e10600;
+}
+
+/* HERO */
+.hero {
+    padding: 80px 20px 60px;
     text-align: center;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-
-.weather-container h1 {
-    color: #e10600;
+.hero h1 {
+    font-size: 42px;
     margin-bottom: 10px;
+    color: #e10600;
+}
+.hero p {
+    font-size: 18px;
+    color: #bdbdbd;
 }
 
-.weather-container p {
-    color: #ccc;
-    margin-bottom: 20px;
-}
-
-.search {
+/* CONTENEDOR */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
     display: flex;
-    gap: 10px;
-    margin-bottom: 25px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.search input {
-    flex: 1;
-    padding: 10px 15px;
+/* CARD */
+.card {
+    background-color: #1c1c1c;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+/* INPUT Y BOTÓN */
+input[type="text"] {
+    width: 70%;
+    padding: 12px;
     border-radius: 8px;
     border: none;
+    margin-right: 10px;
     font-size: 16px;
 }
 
-.search button {
-    padding: 10px 20px;
+button {
+    padding: 12px 20px;
     border-radius: 8px;
     border: none;
+    cursor: pointer;
     background-color: #e10600;
     color: white;
-    cursor: pointer;
     font-weight: bold;
     transition: transform 0.2s, background 0.3s;
 }
-
-.search button:hover {
+button:hover {
     transform: scale(1.05);
     background-color: #ff1c14;
 }
 
-.weather-info {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.weather-info img {
+/* INFORMACIÓN DEL CLIMA */
+#weatherInfo img {
     width: 100px;
     height: 100px;
 }
-
-.back-btn {
-    display: inline-block;
-    margin-top: 25px;
-    color: #aaa;
-    text-decoration: none;
-    font-size: 14px;
+#weatherInfo h2 {
+    margin-bottom: 10px;
 }
-
-.back-btn:hover {
-    color: white;
-}
-
-.credits {
-    font-size: 12px;
-    color: #777;
-    margin-top: 15px;
-}
-
-.credits a {
-    color: #e10600;
-    text-decoration: none;
-}
-
-.credits a:hover {
-    text-decoration: underline;
+#weatherInfo p {
+    font-size: 18px;
+    margin: 5px 0;
 }
