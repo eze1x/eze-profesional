@@ -140,3 +140,8 @@ button:hover {
 .menu ul li a:hover {
     text-decoration: underline;
 }
+.menu-wrapper {
+    width: 100%;
+    position: relative;
+}
+
