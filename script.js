@@ -14,12 +14,4 @@ document.addEventListener("DOMContentLoaded", () => {
         programsMenu.classList.toggle("active");
         projectsMenu.classList.remove("active");
     });
-
-    // Formulario de contacto
-    const contactForm = document.getElementById("contactForm");
-    contactForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("¡Mensaje enviado! Te contactaré pronto.");
-        contactForm.reset();
-    });
 });
