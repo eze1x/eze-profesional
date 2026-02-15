@@ -25,7 +25,6 @@ body {
     border-radius: 8px;
     font-size: 14px;
 }
-
 .back-btn:hover {
     background-color: #e10600;
 }
@@ -48,8 +47,16 @@ h1 {
 }
 
 #mode {
-    color: #ccc;
     font-size: 18px;
+    transition: color 0.3s;
+}
+
+#mode.focus {
+    color: #00ff99;
+}
+
+#mode.break {
+    color: #ffaa00;
 }
 
 /* TIMER */
@@ -57,6 +64,7 @@ h1 {
     font-size: 80px;
     font-weight: bold;
     letter-spacing: 2px;
+    animation: fadeIn 0.4s ease;
 }
 
 /* BOTONES */
@@ -73,10 +81,27 @@ h1 {
     cursor: pointer;
     background-color: #333;
     color: white;
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s, transform 0.2s, opacity 0.2s;
 }
 
-.controls button:hover {
+.controls button:hover:not(:disabled) {
     background-color: #e10600;
     transform: scale(1.05);
+}
+
+.controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
