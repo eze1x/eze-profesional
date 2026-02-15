@@ -11,32 +11,30 @@ const temperature = document.getElementById("temperature");
 
 searchBtn.addEventListener("click", () => {
     const city = cityInput.value.trim();
-    if(city) fetchWeather(city);
-});
-
-cityInput.addEventListener("keypress", (e) => {
-    if(e.key === "Enter") searchBtn.click();
+    if (city) fetchWeather(city);
 });
 
 async function fetchWeather(city) {
     try {
-        const encodedCity = encodeURIComponent(city);
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodedCity}&appid=${apiKey}&units=metric&lang=es`;
-        const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`);
-        
-        if(!res.ok) throw new Error("Ciudad no encontrada");
-        
+        const res = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=es&appid=${apiKey}`
+        );
+
         const data = await res.json();
+
+        if (data.cod !== 200) {
+            throw new Error(data.message);
+        }
 
         cityName.textContent = `${data.name}, ${data.sys.country}`;
         weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-        weatherIcon.alt = data.weather[0].description;
         description.textContent = data.weather[0].description;
         temperature.textContent = `${data.main.temp.toFixed(1)} °C`;
 
-        weatherInfo.style.display = "flex";
-    } catch(err) {
-        alert(err.message);
-        weatherInfo.style.display = "none";
+        weatherInfo.style.display = "block";
+
+    } catch (err) {
+        alert("No se pudo obtener el clima (API no activa aún)");
+        console.error(err);
     }
 }
