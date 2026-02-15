@@ -11,17 +11,20 @@
     <a href="../index.html" class="back-btn">← Volver</a>
 
     <div class="container">
-        <h1>Focus Time</h1>
-        <p id="mode">Tiempo de concentración</p>
+        <h1>Focus Timer</h1>
+        <p id="mode" class="focus">Tiempo de concentración</p>
 
         <div id="timer">25:00</div>
 
         <div class="controls">
             <button id="startBtn">Iniciar</button>
-            <button id="pauseBtn">Pausar</button>
+            <button id="pauseBtn" disabled>Pausar</button>
             <button id="resetBtn">Reset</button>
         </div>
     </div>
+
+    <!-- sonido -->
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
 
     <script src="script.js"></script>
 </body>
