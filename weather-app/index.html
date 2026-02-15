@@ -8,16 +8,13 @@
 </head>
 <body>
 
-    <!-- VOLVER -->
     <a href="../index.html" class="back-btn">← Volver</a>
 
-    <!-- HERO -->
     <header class="hero">
         <h1>Weather App</h1>
         <p>Consulta el clima de cualquier ciudad en tiempo real</p>
     </header>
 
-    <!-- CONTENEDOR -->
     <main class="container">
 
         <!-- BUSCADOR -->
@@ -27,12 +24,23 @@
             <p id="statusMsg" class="status"></p>
         </section>
 
-        <!-- INFORMACIÓN DEL CLIMA -->
+        <!-- CLIMA -->
         <section class="card weather hidden" id="weatherInfo">
             <h2 id="cityName"></h2>
-            <img id="weatherIcon" src="" alt="">
-            <p id="description"></p>
-            <p id="temperature"></p>
+
+            <div class="main-weather">
+                <img id="weatherIcon" src="" alt="">
+                <span id="temperature"></span>
+            </div>
+
+            <p id="description" class="desc"></p>
+
+            <div class="details">
+                <div><span>Sensación</span><strong id="feels"></strong></div>
+                <div><span>Humedad</span><strong id="humidity"></strong></div>
+                <div><span>Viento</span><strong id="wind"></strong></div>
+                <div><span>Mín / Máx</span><strong id="minmax"></strong></div>
+            </div>
         </section>
 
     </main>
