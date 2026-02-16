@@ -197,3 +197,17 @@ a {
 .project-card a:hover {
     background-color: #3a3a3a;
 }
+
+/* Estilos de contacto adicionales */
+.contact-info li a {
+    color: #1db954; /* color verde tipo moderno para LinkedIn/CV */
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.contact-info li a:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
